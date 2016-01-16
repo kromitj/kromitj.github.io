@@ -1,0 +1,81 @@
+body {
+  font-family: helvetica;
+  margin: 0px;
+}
+header, footer {
+  background-color: blue;
+  color: white
+}
+/*footer {
+  position: absolute;
+  bottom: 0;
+}*/
+.name-logo {
+  margin-left: 5%;
+  display: inline-block;
+}
+.name-logo > a {
+  color: white;
+}
+.top-nav {
+  margin-top: 37px;
+  margin-right: 5%;
+  display: inline-block;
+  float: right;
+  font-size: 25px;
+}
+.blog-nav {
+  padding-left: 47%; 
+}
+
+.text-width {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  float: left;
+  padding-right: 20px;
+}
+a.top-nav-link:link, a.top-nav-link:visited {
+  display: block;
+}
+a.nav-link:link, a.nav-link:visited {  
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+}
+a.nav-link:hover, a.navlink:active {
+  color: teal;
+}
+.top-nav-link {
+  color: white;
+}
+.bottom-nav {
+  display: inline-block;
+}
+
+.bottom-nav-link {  
+  color: green;
+}
+
+.intro-greeting {
+  text-align: center;
+}
+.section-label {
+  display: block;
+  text-align: center;
+}
+
+.sub-title {
+  font-weight: lighter;
+}
+
+/*.blog-entries {
+  text-align: center;
+}*/
