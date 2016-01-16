@@ -75,6 +75,9 @@ a.nav-link:hover, a.navlink:active {
 .sub-title {
   font-weight: lighter;
 }
+.current-page {
+  color : orange;
+}
 
 /*.blog-entries {
   text-align: center;
