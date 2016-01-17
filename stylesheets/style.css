@@ -1,73 +1,69 @@
 body {
   font-family: helvetica;
   margin: 0px;
-  background-color: 7E827A;
+  background-color: #FFFFFF;
+  color: #2C3E50;
 }
 header, footer {
-  background-color: blue;
-  color: white
+  background-color: #FC4349;
+  color: #FFFFFF;
 }
-/*footer {
-  position: absolute;
-  bottom: 0;
-}*/
-.name-logo {
-  margin-left: 5%;
-  display: inline-block;
+p {
+	color: 2C3E50;
 }
-.name-logo > a {
-  color: white;
+
+.blog-header {
+	color: #6DBCDB;
 }
-.top-nav {
-  margin-top: 37px;
-  margin-right: 5%;
-  display: inline-block;
-  float: right;
-  font-size: 25px;
-}
+
 .blog-nav {
   padding-left: 47%; 
 }
 
-.text-width {
-  margin-left: 15%;
-  margin-right: 15%;
+.bottom-nav {
+  display: inline-block;
 }
-.nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+.bottom-nav-link, .blog-link {  
+  color: #FC4349;
 }
+
+.current-page {
+  color : #2C3E50;
+}
+
+.intro-greeting {
+  text-align: center;
+}
+
+.name-logo {
+  margin-left: 5%;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
 .nav-item {
   float: left;
   padding-right: 20px;
 }
-a.top-nav-link:link, a.top-nav-link:visited {
-  display: block;
-}
+
 a.nav-link:link, a.nav-link:visited {  
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   padding: 5px;
 }
-a.nav-link:hover, a.navlink:active {
-  color: teal;
-}
-.top-nav-link {
-  color: white;
-}
-.bottom-nav {
-  display: inline-block;
+
+a.nav-link:hover, a.nav-link:active {
+  color: #6DBCDB;
 }
 
-.bottom-nav-link {  
-  color: green;
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.intro-greeting {
-  text-align: center;
-}
 .section-label {
   display: block;
   text-align: center;
@@ -76,10 +72,28 @@ a.nav-link:hover, a.navlink:active {
 .sub-title {
   font-weight: lighter;
 }
-.current-page {
-  color : orange;
+
+.text-width {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.top-nav {
+  margin-top: 37px;
+  margin-right: 5%;
+  display: inline-block;
+  float: right;
+  font-size: 25px;
 }
 
-/*.blog-entries {
-  text-align: center;
-}*/
+.top-nav-link {
+  color: #FFFFFF;
+}
+
+a.top-nav-link:link, a.top-nav-link:visited {
+  display: block;
+}
+.current-page {
+  color : #2C3E50;
+}
+
+
