@@ -8,28 +8,59 @@ header, footer {
   background-color: #FC4349;
   color: #FFFFFF;
 }
-p {
-	color: 2C3E50;
+
+.blog-entries {
+  line-height: 80%;
+  margin-bottom: 90px;  
+}
+
+.blog-entry {  
+  margin-top: 60px;
+}
+
+.blog-entry-title {  
+  margin-bottom: 0px;
+}
+
+.blog-entry-subtitle {
+  margin-top: 15px;
 }
 
 .blog-header {
-	color: #6DBCDB;
+	color: #FC4349;
 }
 
 .blog-nav {
   padding-left: 47%; 
+}
+.blog-link {
+  color: #6DBCDB;
+}
+
+.blog-list {
+  line-height: 180%;
+  font-weight: 600;
+  color: #2C3E50;
+  font-size: 16px;
+}
+
+.blog-text {
+  line-height: 140%;
+  font-family: georgia;
+  font-size: 18px;
 }
 
 .bottom-nav {
   display: inline-block;
 }
 
-.bottom-nav-link, .blog-link {  
+.bottom-nav-link {  
   color: #FC4349;
 }
 
 .intro-greeting {
   text-align: center;
+  line-height: 80%;
 }
 
 .name-logo {
@@ -62,6 +93,7 @@ a.nav-link:hover, a.nav-link:active {
 
 .page-header {
 	font-size: 35px;
+  margin: 15px;
 }
 
 .section-label {
@@ -71,11 +103,15 @@ a.nav-link:hover, a.nav-link:active {
 
 .sub-title {
   font-weight: lighter;
+  margin-bottom: 15px;  
+}
+.intro-greeting-last {
+  padding-bottom: 40px;
 }
 
 .text-width {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 .top-nav {
   margin-top: 37px;
@@ -86,7 +122,7 @@ a.nav-link:hover, a.nav-link:active {
 }
 
 .top-nav-link {
-  color: #FFFFFF;
+  color: #2C3E50;
 }
 
 a.top-nav-link:link, a.top-nav-link:visited {
@@ -95,14 +131,14 @@ a.top-nav-link:link, a.top-nav-link:visited {
 /* Moved current page to bottom, the underlining was white otherwise */
 
 .current-page {
-  color : #2C3E50;
+  color : #FFFFFF;
   text-decoration: underline;
   
 }
 
 h2.current-page {
 	color: #FFFFFF;
-	text-decoration-color: #2C3E50;
+	text-decoration-color: ;
 }
 
 
