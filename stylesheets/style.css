@@ -30,6 +30,13 @@ p {
 
 .current-page {
   color : #2C3E50;
+  text-decoration: underline;
+  
+}
+
+h2.current-page {
+	color: #FFFFFF;
+	text-decoration-color: #2C3E50;
 }
 
 .intro-greeting {
@@ -64,6 +71,10 @@ a.nav-link:hover, a.nav-link:active {
   padding: 0;
 }
 
+.page-header {
+	font-size: 35px;
+}
+
 .section-label {
   display: block;
   text-align: center;
@@ -92,8 +103,6 @@ a.nav-link:hover, a.nav-link:active {
 a.top-nav-link:link, a.top-nav-link:visited {
   display: block;
 }
-.current-page {
-  color : #2C3E50;
-}
+
 
 
