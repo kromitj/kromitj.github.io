@@ -58,9 +58,18 @@ header, footer {
   color: #FC4349;
 }
 
+.header-wrap {
+  border-bottom: solid #2C3E50;  
+}
+
 .intro-greeting {
   text-align: center;
   line-height: 80%;
+}
+
+.main-content {
+  margin-top: 60px;
+  margin-bottom: 90px;
 }
 
 .name-logo {
@@ -110,7 +119,7 @@ a.nav-link:hover, a.nav-link:active {
   padding-bottom: 40px;
 }
 
-.text-width {
+.text-width {  
   margin-left: 30%;
   margin-right: 30%;
 }
