@@ -102,6 +102,7 @@ a.nav-link:hover, a.nav-link:active {
 }
 
 .sub-title {
+  color: #6DBCDB;
   font-weight: lighter;
   margin-bottom: 15px;  
 }
