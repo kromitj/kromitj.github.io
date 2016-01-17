@@ -28,17 +28,6 @@ p {
   color: #FC4349;
 }
 
-.current-page {
-  color : #2C3E50;
-  text-decoration: underline;
-  
-}
-
-h2.current-page {
-	color: #FFFFFF;
-	text-decoration-color: #2C3E50;
-}
-
 .intro-greeting {
   text-align: center;
 }
@@ -102,6 +91,18 @@ a.nav-link:hover, a.nav-link:active {
 
 a.top-nav-link:link, a.top-nav-link:visited {
   display: block;
+}
+/* Moved current page to bottom, the underlining was white otherwise */
+
+.current-page {
+  color : #2C3E50;
+  text-decoration: underline;
+  
+}
+
+h2.current-page {
+	color: #FFFFFF;
+	text-decoration-color: #2C3E50;
 }
 
 
