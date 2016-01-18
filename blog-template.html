@@ -12,36 +12,52 @@ What new semantic elements did you learn about (if any)?
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Site</title>
+    <title>Mitch Kroska</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
   </head>
   <body>
-    <header>
-      <h1>My Blog</h1>
-      <nav><a href="#"/a>Home</a><a href="#">Porfolio</a><a href="#">About Me</a><a href="#">Contact Me</a></nav>
+    <header class="header-wrap">      
+        <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
+        <nav class="top-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
+          </ul>
+        </nav>      
+        <section class="intro-greeting">          
+          <h2 class="current-page page-header">~~~Blog Title~~~</h2>
+          <h3 class="sub-title">W~~~Sub Title~~~</h3>
+          <h4>01/03/2016</h4>
+          <nav class="arrow-nav intro-greeting-last">
+            <ul class="nav-list">
+              <li class="nav-item"><a class="nav-link top-nav-link" href="#" title="prev blog">&#9664;</a></li>
+              <li class="nav-item"><a class="nav-link top-nav-link" href="#" title="back">&#9650;</a></li>              
+              <li class="nav-item"><a class="nav-link top-nav-link" href="#" title="next blog">&#9658;</a></li>              
+            </ul>            
+          </nav>
+        </section>
+      </div>
     </header>
-    <main>
-      <article>
-        <img src="#" alt="blog 1 picture">
-        <section>
-          <h2>Blog 1</h2>
-          <h3>Jan 7, 2016</h3>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </section>
+    <div class="text-width">
+      <article class="main-content">        
+        
       </article>
-      <article>
-        <img src="#" alt="blog 1 picture">
-        <section>
-          <h2>Blog 2</h2>
-          <h3>Jan 8, 2016</h3>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </section>
-      </article>
-    </main>
+      <nav class="bottom-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Back To Top</a></li>
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Look At My Portfolio</a></li>
+        </ul>
+      </nav>
       <footer>
-        <a href="#">Facebook</a>
-        <a href="#">Linkdin</a>
-        <a href="#">Twitter</a>
-        <a href="#">Github</a>
-      </footer>    
+        <h2 class="section-label">Contact</h2>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link twitter" href="https://twitter.com/MitchKroska" target="_blank"><img src="../imgs/webicon-twitter-m.png" alt=""></a></li>
+          <li class="nav-item"><a class="nav-link facebook" href="https://www.facebook.com/mitch.kroska" target="_blank"><img src="../imgs/webicon-facebook-m.png" alt="Facebook"></a></li>
+          <li class="nav-item"><a class="nav-link linkedin" href="www.linkedin.com" target="_blank"><img src="../imgs/webicon-github-m.png" alt="Link"></a></li>
+        </ul>
+      </footer>
+      </div>
   </body>
 </html>
