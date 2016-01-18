@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mitch's DBC Blog</title>
+    <title>Mitch Kroska</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css">    
   </head>
-
   <body>
-    <header>
-      <h1>Mitch's DBC Blog</h1>
-      <nav><a href="#">Home</a><a href="#">Porfolio</a><a href="#">About Me</a><a href="#">Contact Me</a></nav>
+    <header class="header-wrap">      
+        <h1 class="name-logo "><a class="nav-link top-nav-link current-page" href="#">Mitch Kroska</a></h1>
+        <nav class="top-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link top-nav-link" href="#">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="blog/blog-index.html">Blog</a></li>
+          </ul>
+        </nav>      
+        <section class="intro-greeting">
+          <h2 class="page-header">Web Developer In Training</h2>
+          <h3 class="sub-title">TAKE A LOOK INTO THE LIFE OF A STUDENT OF DEV BOOTCAMP</h3>
+          <nav class="arrow-nav intro-greeting-last">
+            <ul class="nav-list">
+              <li class="nav-item"><a class="nav-link top-nav-link" href="blog/blog-index.html" title="blog">&#9664;</a></li>
+              <li class="nav-item"><a class="nav-link top-nav-link" href="#" title="">&#8200;</a></li>              
+              <li class="nav-item"><a class="nav-link top-nav-link" href="portfolio.html" title="portfolio">&#9658;</a></li>              
+            </ul>            
+          </nav>
+        </section>
     </header>
-    <main>
-      <ol>
-        <li>
-          <h2><a href="blog/git.html">Version Control</a></h2>
-          <h3>WHY YOU SHOULD BE USING IT</h3>
-          <h4>Jan 7, 2016</h4>
-        </li>
-      </ol>
-        
-    </main>
-    <footer>
-      <a href="#">Facebook</a>
-      <a href="#">Linkdin</a>
-      <a href="#">Twitter</a>
-      <a href="#">Github</a>
-    </footer>    
+    <div class="text-width">
+      <main class="main-content">
+        <section class="about-me">
+          <ul class="nav-list">
+            <li class="nav-item"><img class="my-image" src="imgs/me-pic.JPG" alt="This guy's really good looking!"></li>
+            <li class="nav-item"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id vel enim odit ipsa et maxime ad, expedita ut earum vitae quaerat molestias quisquam magnam nisi explicabo, eaque aliquid corporis optio.</p></li>
+          </ul>         
+        </section>             
+      </main>
+      <nav class="bottom-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Back To Top</a></li>
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="blog/blog-index.html">Go To My Blog</a></li>
+        </ul>
+      </nav>
+      <footer>
+        <h2 class="section-label">Contact</h2>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link twitter" href="https://twitter.com/MitchKroska" target="_blank"><img src="imgs/webicon-twitter-m.png" alt=""></a></li>
+          <li class="nav-item"><a class="nav-link facebook" href="https://www.facebook.com/mitch.kroska" target="_blank"><img src="imgs/webicon-facebook-m.png" alt="Facebook"></a></li>
+          <li class="nav-item"><a class="nav-link linkedin" href="www.linkedin.com" target="_blank"><img src="imgs/webicon-github-m.png" alt="Link"></a></li>
+        </ul>
+      </footer>
+      </div>
   </body>
 </html>
