@@ -1,3 +1,8 @@
+What is the difference between margin, border, and padding?
+What are the best practices associated with using classes vs. ids?
+What are the differences between relative, absolute, fixed, and static positioning?
+What does it mean to display inline vs using inline block?
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -31,8 +36,132 @@
       </div>
     </header>
     <div class="text-width">
-      <article class="main-content">        
+      <article class="main-content">
+        <figure>
+          <img src="../imgs/fashion.jpg" alt="Girl, you got shoe on your head...">
+          <figcaption>One of the last Louboutin-Rhinos left on the world, simply majestic!</figcaption>
+        </figure>        
         
+        <h3 class="blog-header">Let's Define What Css Is</h3>
+        <p class="blog-text">CSS stands for Cascading Style Sheets and it was created to be HTML’s style expert. Pre-CSS, HTML was like so boring, pages were rendered with basic styling options and the developer had to hard-code them into the HTML; it needed a major wardrobe change. When CSS got it’s skin in the game, it started with very little skin and had a very slow adoption rate; CSS was like the Violent Femmes of programming style sheet languages. What CSS was offering was a separation of content/structure(HTML) and style(CSS). The power in this is you can easily apply a certain style to multiple pages and changing the style on the fly is much easier; HTML got a bunch of clothes and organized its closet; wow HTML, you look good!</p>
+
+        <p class="blog-text">CSS has control over all the properties of HTML elements; it’s like having your own personal seamstress who can change the fit, color, style, pattern, etc of your clothes, on the fly. For instance, if you have an HTML p tag filled with text, you can choose a font size for it like this:</p>
+
+        <code>p { font-size: 16px; }</code>
+
+        <p class="blog-text">CSS uses a key : value system, where the key is the property you want to change and the value is what you want to change it to. In the above example, p is selecting the element you with to select, font-size is a property(key) of p tags, 16px is the value you wish to change it to and the brackets simply wrap it all up; it's the hot-dog bun of the CSS meal.</p>
+        <h3 class="blog-header">Margin, Border, Padding; What's The Differance</h3>
+        <p class="blog-text">CSS handles HTML elements like boxes, and with these boxes you can modify the perimeters of its sides. Here is a visual guide to help you:</p>
+        <img src="../imgs/box-model.gif" alt="Box on box on box">
+        <dl>
+          <dt>Content</dt>
+          <dd>A property of the box model that wraps the raw element boundry, before any padding or margins are added; It's like your house</dd>
+        </dl>
+        <dl>
+          <dt>Padding</dt>
+          <dd>A property of the box model that gives your element some room to breath; it's the equivalent of a yard.</dd>
+        </dl>
+        <dl>
+        <dl>
+          <dt>Border</dt>
+          <dd>A property of the box model that allows you to display the outside borders of your element, which includes the content and the padding. It's the Donald Trump of the box model; let's build a wall!</dd>
+        </dl>
+          <dt>Margin</dt>
+          <dd>This is like your force-field, it's not part of the element but it protects the element from it's neighbors; stay off my lawn!</dd>
+        </dl>
+        <p class="blog-text">It can be confusing knowing when to use padding as opposed to margins and honestly, I still need to experiment more with the differances of both.</p>
+        <h3 class="blog-header">Some people Got Class, Others Have An Id</h3>
+        <img src="../imgs/class-vs-id.jpg" alt="">
+        <p class='blog-text'>In CSS you add your own code-names for the elements in your HTML file. This is done by either giving the elelment an Id or a Class; or both, let's go crazy! You would give an element an Id when you want to isolate something that only occures once in the structure of your HTML, like a header navigation bar. On the other hand you use classes for elements that you find yourself describing over and over again in the HTML. Class and Id's allow you to easly select and isolate elements that share similar functionality; like you may have a bunch of h3 tags, but half have a class of super-big and half have a class of not-so-big, while they all have seporate Id names:</p>
+        <pre>
+          <code>
+            &lt;h3 class="super-big" id="blah"&gt;blah&lt;/h3&gt;
+            &lt;h3 class="super-big" id="bleh"&gt;bleh&lt;/h3&gt;
+            &lt;h3 class="super-big" id="blue"&gt;blue&lt;/h3&gt;
+            &lt;h3 class="not-so-big" id="blee"&gt;blee&lt;/h3&gt;
+            &lt;h3 class="not-so-big" id="blie"&gt;blie&lt;/h3&gt;
+            &lt;h3 class="not-so-big" id="blue"&gt;blua&lt;/h3&gt;
+          </code>
+        </pre>
+        <p class="blog-text"> By giving the each element an Id you can select every one of these h3 tags using using Css; For example;</p>    
+          <pre>
+            <code>
+              #blah { font-size: 1px;}
+              #bleh { font-size: 2px;}
+            </code>
+          </pre>
+
+          <p class="blog-text"> This would cause the h3 tag with an Id of blah to be rendered at 1px, while bleh would render at 2px.</p>
+          <p class="blog-text">"#" stands for Id and "." stands for class.</p>
+          <p class="blog-text">Using classes in CSS is just as easy. We can isolate the h3 tags with a class of super-big and give them a font size of 100px, like this: </p>
+          <pre>
+            <code>
+              .super-big { font-size: 1px;}
+            </code>
+          </pre>
+          <p class="blog-text">Okay, may a 100px is a little to big; not if its a billboard though; then it's probably to small.</p>
+          <h3 class="blog-header">Let's position Some Stuff</h3>
+          <img src="../imgs/css-positioning.jpg" alt="">
+          <p class="blog-text">CSS offers four differant positioning attributes for HTML elements, these include:</p>
+          <dl>
+            <dt>Static</dt>
+            <dd>Shapeless, formless, like water, also the default value for position. It follows the normal flow of the page. The properties of top, bottom, right, left do not have any effect on an element that's statically positioned; Become like water my friend!</dd>
+          </dl>
+          <dl>
+            <dt>Relative</dt>
+            <dd>Positioned relative to its natural(static) position. This allows you to move it around its natural position. Other content will not adjust their self for relativley moved elements. It's like static except the properties: top, bottom, left, right work.</dd>
+          </dl>
+          <dl>
+            <dt>Fixed</dt>
+            <dd>Positioned relative to the viewpoint. It's like having a bug on your screen, it stays in the same place even if you scroll. Putting a bottom property with a value of zero, would place the element at the bottom of the page.</dd>
+          </dl>
+          <dl>
+            <dt>Absolute</dt>
+            <dd>Define a playpen for your element to move around in. Absolute positions the element relative to its nearest positioned ancestor, as opposed to the view-port or its natural position.</dd>
+          </dl>
+          <h3 class="blog-header">WHat's The Differance Between Display and Display-Block? </h3>
+          <dl>
+            <dt>Inline</dt>
+            <dd>
+              <ul class="blog-list">
+                <li>respect left & right margins and padding, but not top & bottom.</li>
+                <li>cannot have a width and height set.</li>
+                <li>allow other elements to sit to their left and right.</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Inline-block</dt>
+            <dd>
+              <ul class="blog-list">
+                <li>allow other elements to sit to their left and right.</li>
+                <li>respect top & bottom margins and padding.</li>
+                <li>respect height and width.</li>
+              </ul>
+            </dd>
+          </dl>
+          <h3 class="blog-header">This Post Was Way Too Long, Just End It Already!</h3>
+          <dl>
+            <dt>Things That We Learned:</dt>
+            <dd>
+              <ul class="blog-list">
+                <li>CSS allows us to seporate the styling from the content/structure.</li>
+                <li>Elements adhere to the box-model, which includes: content, padding, border and margin.</li>
+                <li>Ids should be used on elements that will only appear once in the application.</li>
+                <li>Classes should be used to describe elements that have repeated usage through out the program.</li>
+                <li>Static positioning is the default and just goes with the natural flow of the document.</li>
+                <li>Relative allows you to modify the staic position.</li>
+                <li>Fixed is the bug on the windshield.</li>
+                <li>Absolute allows you to position an element inside its parent class.</li>
+                <li>Display inline-block respect top, bottom, height, width; while inline does not.</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Congratulations on finishing! Here's a cookie:</dt>
+            <dd><img src="../imgs/cookie.png" alt="" width="40%"></dd>
+          </dl>
+          
       </article>
       <nav class="bottom-nav">
         <ul class="nav-list">
