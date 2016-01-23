@@ -8,9 +8,12 @@ header, footer {
   background-color: #FC4349;
   color: #FFFFFF;
 }
+img {
+  width: 100%;
+}
 
 .arrow-nav {
-  padding-left: 46%; 
+  padding-left: 0%; 
 }
 
 .bottom-nav {
@@ -50,8 +53,9 @@ header, footer {
 }
 
 .nav-item {
-  float: left;
+  /*float: left; */
   padding-right: 20px;
+  display: inline-block;
 }
 
 a.nav-link:link, a.nav-link:visited {  
@@ -69,6 +73,7 @@ a.nav-link:hover, a.nav-link:active {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .page-header {
@@ -120,6 +125,45 @@ a.top-nav-link:link, a.top-nav-link:visited {
 h2.current-page {
 	color: #FFFFFF;
 	text-decoration-color: ;
+}
+
+@media screen and (max-width: 1400px) {
+  .text-width {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+    
+    img {
+
+    }
+
+    .nav-item-resp {
+    box-sizing: border-box;
+    padding: 15px;
+    }
+
+
+    .intro-greeting {
+      line-height: 180%;
+      display: inline-block;
+    }
+    .name-logo {
+      margin-left: 0%;
+      width: 100%;
+      text-align: center;
+    }
+
+    .text-width {  
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    
+    
+    
+    
 }
 
 
