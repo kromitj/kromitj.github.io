@@ -39,12 +39,12 @@
         </figure>              
         
         <h3 class="blog-header">Are You Saying KFC Buckets Are Arrays?</h3>
-        <p class="blog-text">Kinda, yeah! An array is defined as a ordered, integer-indexed collection of objects. A KFC bucket is a collection of chicken were its index is the order your grubby hands take the chicken out of the bucket; one drumstick, "num num num", two drumstick, "num num num", "uh I hate myself for eating this garbage", sign, three drumstick, "num num uhhhh nu...". As you work your way through the bucket the length of the KFC array also begins to strink, but what if I told you that the last element of the KFC Array actually has an index of 6. This happens because in Computer Science the first element of something starts at zero, opposed to starting at one; whoa, that's mind-bendingly trippy, man!" This stift in logic causes what is known as a fencepost error or an off-by-one error.</p>
+        <p class="blog-text">Kinda, yeah! An array is defined as a ordered, integer-indexed collection of objects. A KFC bucket is a collection of chicken, where its index is the order your grubby hands take the chicken out of the bucket; one drumstick, "num num num", two drumstick, "num num num", "uh I hate myself for eating this garbage", sign, three drumstick, "num num uhhhh nu...". As you work your way through the bucket the length of the KFC array also begins to strink, but what if I told you that the last element of the KFC Array actually has an index of 6. This happens because in Computer Science the first element of something starts at zero, opposed to starting at one; whoa, that's mind-bendingly trippy, man!" This stift in logic causes what is known as a fencepost error or an off-by-one error.</p>
         <code class="language-ruby">my_chicken = ['1st piece', '2nd piece', '3rd piece', '4th piece', '5th piece', '6th piece', '7th piece']</code>
         <code class="language-ruby">my_chicken[0]    # => 1st piece</code>
         <code class="language-ruby">my_chicken[6]    # => 7th piece</code>
         <code class="language-ruby">my_chicken[7]    # => nil</code>
-        <p class="blog-text">Here you can see that the my chicken array at index zero is the first element, which has a value of '1st piece'. The last element is at index six, with a value of '7th piece'. Finally even thought the array has seven elements if you try to access the 7th index of the my_chicken array you will get a return value of <em>nil</em>.</p>
+        <p class="blog-text">Here you can see that the my_chicken array at index zero is the first element, which has a value of <em>'1st piece'</em>. The last element is at index six, with a value of <em>'7th piece'</em>. Finally even though the array has seven elements if you try to access the 7th index of the my_chicken array you will get a return value of <em>nil</em>.</p>
 
         <figure>
           <img src="../imgs/fencepost-error.jpg" alt="Off by One, oh the fury!">
@@ -52,18 +52,18 @@
           <figcaption>When setting up a fence you have to account for the first post, but since we're used to starting at zero, people tend to think a fence will take one less post then it actually will.</figcaption>
         </figure>
 
-        <p class="blog-text">Ok, so lets see how using the programming language ruby we can create an array. Here are your options:</p>
+        <p class="blog-text">Ok, so lets see how using the programming language <em>ruby</em>, we can create an array. Here are your options:</p>
         <code class="language-ruby">my_first_array = [1, 2, 3, 4, 5, 6]   # this creates an array with 6 elements of type:Integer</code>
         <code class="language-ruby">my_second_array = ['a','e','i','o','u']   # this creates an array with 5 elements of type:String</code>
         <code class="language-ruby">kitchen_sink_array = ["Sink", 1, 13.5, kitchen_object]  # four element array with all differant object types</code>
-        <code class="language-ruby">empty_array = Array.new   # => []  this creates an emty array</code>
+        <code class="language-ruby">empty_array = Array.new   # => []  this creates an empty array</code>
         <code class="language-ruby">three_nil_array = Array.new(3)  # creates a three element array, by default they all get set to nil</code>
-        <code class="language-ruby">all_at_zero = Array.new(5, 0)   # creates a five element array with initial values set to 0</code>
+        <code class="language-ruby">five_zero_array = Array.new(5, 0)   # creates a five element array with initial values set to 0</code>
 
         <h3 class="blog-header">#LetsLearnAboutHashes #NotTheDrug #NotLikeHashbrowns</h3>
-        <p class="blog-text">Hashes are similar to Arrays. Where the Hashes differ is instead of using and integer index, a Hash uses a key. 
-        The hash consists of key/value pairs were the key is a unique object that differentiates itself from all its sibling Hashes. Here is an example of what hashes look like:</p>
-        <code class="language-ruby">artist_best_song = {"Eminem" => "The Way I AM", "Elvis Costello" => "(I Don't Want To Go To) Chelsea", "Justin Bieber" => "Baby, Baby"}</code> 
+        <p class="blog-text">Hashes are similar to Arrays. Where the Hashes differ is instead of using an integer index, a Hash uses a key. 
+        The hash consists of key/value pairs were the key is a unique object that differentiates itself from all its sibling elements. Here is an example of what hashes look like:</p>
+        <code class="language-ruby">artist_best_song = {"Eminem" => "The Way I Am", "Elvis Costello" => "(I Don't Want To Go To) Chelsea", "Justin Bieber" => "Baby, Baby"}</code> 
         <p class="blog-text">You can also use symbols for the key instead of string, like this:</p>
         <code class="language-ruby">car_ratings = { :civic => 4.5, :300m => 1.5, :911 => 5, :mini-cooper => 4.5}</code>
         <code class="language-ruby">car_ratings = { civic: 4.5, 300m: 1.5, 911: 5, mini-cooper: 4.5}
