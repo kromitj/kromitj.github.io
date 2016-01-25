@@ -44,7 +44,7 @@
         <code class="language-ruby">my_chicken[0]    # => 1st piece</code>
         <code class="language-ruby">my_chicken[6]    # => 7th piece</code>
         <code class="language-ruby">my_chicken[7]    # => nil</code>
-        <p class="blog-text">Here you can see that the my_chicken array at index zero is the first element, which has a value of <em>'1st piece'</em>. The last element is at index six, with a value of <em>'7th piece'</em>. Finally even though the array has seven elements if you try to access the 7th index of the my_chicken array you will get a return value of <em>nil</em>.</p>
+        <p class="blog-text">Here you can see that the my_chicken array at index zero is the first element, which has a value of <em>'1st piece'</em>. The last element is at index six, with a value of <em>'7th piece'</em>. Finally, even though the array has seven elements, if you try to access the 7th index of the my_chicken array you will get a return value of <em>nil</em>.</p>
 
         <figure>
           <img src="../imgs/fencepost-error.jpg" alt="Off by One, oh the fury!">
@@ -68,7 +68,7 @@
         <code class="language-ruby">car_ratings = { :civic => 4.5, :300m => 1.5, :911 => 5, :mini-cooper => 4.5}</code>
         <code class="language-ruby">car_ratings = { civic: 4.5, 300m: 1.5, 911: 5, mini-cooper: 4.5}
         </code>
-        <p class="blog-text">Both of them create the exact same Hash with the same symbol keys. You can create an empty array by using the class method 'new', like this:</p>
+        <p class="blog-text">Both of them create the exact same Hash with the same symbol keys. You can create an empty Hash by using the class method 'new', like this:</p>
         <code class="language-ruby">empty_hash = Hash.new   # => {}</code> 
         <p class="blog-text">One thing that I find harder with Hashes is to isolate specific values or specific keys. To to get the value of from a hash element you can put in the key name into the index of the created hash, like this:</p>
         <code class="language-ruby">car_ratings[:mini-cooper]   #  =>  4.5</code>
