@@ -39,7 +39,7 @@
         </figure>              
         
         <h3 class="blog-header">Are You Saying KFC Buckets Are Arrays?</h3>
-        <p class="blog-text">Kinda, yeah! An array is defined as a ordered, integer-indexed collection of ojects. A KFC bucket is a collection of chicken were its index is the order your grubby hands take the chicken out of the bucket; one drumstick, "num num num", two drumstick, "num num num", "uh I hate myself for eating this garbage", sign, three drumstick, "num num uhhhh nu... As you work your way through the bucket the length of the KFC array also begins to strink, but what if I told you that the KFC Array last element actually has an index of 6. This happens becouse in Computer Science the first element of something starts at Zero opposed to starting at one; whoa, that mind-bendingly trippy, man!" This stift in logic causes what is known as a fencepost errr or off-by-one error.</p>
+        <p class="blog-text">Kinda, yeah! An array is defined as a ordered, integer-indexed collection of objects. A KFC bucket is a collection of chicken were its index is the order your grubby hands take the chicken out of the bucket; one drumstick, "num num num", two drumstick, "num num num", "uh I hate myself for eating this garbage", sign, three drumstick, "num num uhhhh nu...". As you work your way through the bucket the length of the KFC array also begins to strink, but what if I told you that the last element of the KFC Array actually has an index of 6. This happens because in Computer Science the first element of something starts at zero, opposed to starting at one; whoa, that's mind-bendingly trippy, man!" This stift in logic causes what is known as a fencepost error or an off-by-one error.</p>
         <code class="language-ruby">my_chicken = ['1st piece', 'first piece', '3rd piece', '4th piece', '5th' piece', '6th piece', '7th piece']</code>
         <code class="language-ruby">my_chicken[0]    # => 1st piece</code>
         <code class="language-ruby">my_chicken[6]    # => 7th piece</code>
@@ -62,13 +62,13 @@
 
         <h3 class="blog-header">#LetsLearnAboutHashes #NotTheDrug #NotLikeHashbrowns</h3>
         <p class="blog-text">Hashes are similar to Arrays. Where the Hashes differ is instead of using and integer index, a Hash uses a key. 
-        The hash consists of key/value pairs were the key is a unique object that differentiates itself from all its sibling hashes. Here is an example of what hashes look like:</p>
+        The hash consists of key/value pairs were the key is a unique object that differentiates itself from all its sibling Hashes. Here is an example of what hashes look like:</p>
         <code class="language-ruby">artist_best_song = {"Eminem" => "The Way I AM", "Elvis Costello" => "(I Don't Want To Go To) Chelsea", "Justin Bieber" => "Baby, Baby"}</code> 
         <p class="blog-text">You can also use symbols for the key instead of string, like this:</p>
         <code class="language-ruby">car_ratings = { :civic => 4.5, :300m => 1.5, :911 => 5, :mini-cooper => 4.5}</code>
         <code class="language-ruby">car_ratings = { civic: 4.5, 300m: 1.5, 911: 5, mini-cooper: 4.5}
         </code>
-        <p class="blog-text">Both of the create a the exact same Hash with the same symbol keys. You can create an empty array by using the class method, like this:</p>
+        <p class="blog-text">Both of them create the exact same Hash with the same symbol keys. You can create an empty array by using the class method 'new', like this:</p>
         <code class="language-ruby">empty_hash = Hash.new   # => {}</code> 
         <p class="blog-text">One thing that I find harder with Hashes is to isolate specific values or specific keys. To to get the value of from a hash element you can put in the key name into the index of the created hash, like this:</p>
         <code class="language-ruby">car_ratings[:mini-cooper]   #  =>  4.5</code>
@@ -79,7 +79,7 @@
           <dt>Things That We Learned:</dt>
           <dd>
             <ul class="blog-list">
-              <li>Arrays or collections of data with integer indexes</li>
+              <li>Arrays or collections of data with integer indexs</li>
               <li>Arrays can be filled all sorts of objects</li>
               <li>You select an element of an Array by its index,like this: my_array[1]</li>
               <li>Arrays start and index 0, <em>watch-out for fence-post errors!</em></li>
