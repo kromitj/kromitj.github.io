@@ -19,7 +19,7 @@
       </nav>      
       <section class="intro-greeting">          
         <h2 class="current-page page-header">Don't Hate, Enumberate</h2>
-        <h3 class="sub-title">DON'T BREAK THE CYCLE, USE IT</h3>
+        <h3 class="sub-title">LETS GET SOME POWER-UPS</h3>
         <h4>xx/xx/xxxx</h4>
         <nav class="arrow-nav intro-greeting-last">
           <ul class="nav-list">
@@ -33,8 +33,8 @@
     <div class="text-width">
       <article class="main-content">
         <figure>
-          <img src="../imgs/placeholder.png" alt="Num Num Arrays are Yummy">
-          <figcaption>Caption text for above picture</figcaption>
+          <img src="../imgs/beasty_boys.jpg" alt="Num Num Arrays are Yummy">
+          <figcaption>What do you mean you forgot the fish-eye lens?...</figcaption>
         </figure>              
         
         <h3 class="blog-header">Enumberables Everyone!</h3>
@@ -82,19 +82,50 @@
         then inside the block is making available the current element of the Array or Hash and execute 
         the code put inside the block. The method will do this however many times you specified as the
         parameter, if you give no parameter it will cycle for inifinity, where as if you 
-        put 3, it will cycle three times. Let's do something fun with this; let's make a beat machine</p>
+        put 3, it will cycle three times. Let's do something fun with this; let's make a beat machine:</p>
+        <p class="blog-text">First lets build the beat based of a Beastie Boys lyric, hover over quote to hear clip</p>
+                <audio id="sound2" src="../audio/beastie_boys_audio.m4a" preload="auto"></audio><a class="" onmouseover="document.getElementById('sound2').play();"><dl>
+          <dt>Mike D -</dt>
+          <dd>"I got kicks on the one, seven, and eleven. Snares on the five and thirteen!"</dd>
+        </dl></a>
         
          <code class="language-ruby">beat_machine = {:one => ['Hi-hat','Bass'], :two => [], :three => ['Hi-hat'],
          :four => [], :five => ['Hi-hat','Snare'], :six => [], :seven => ['Hi-hat','Bass'],
          :eight => [], :nine => ['Hi-hat','Bass'], :ten => [], :eleven => ['Hi-hat','Bass'],
          :twelve => [], :thirteen => ['Hi-hat','Snare'], :fourteen => [], :fiveteen => ['Hi-hat'],
          :sixteen => ['Hi-hat','Bass'],}</code>
-        <code class="language-ruby">Mario</code>
-        <code class="language-ruby">Yoshi</code>
-        <code class="language-ruby">Bowser</code>
-        <code class="language-ruby">Peach</code>
+         <p class="blog-text">Now Lets use Enumerable#cycle to infinity cycle through all the beats of the measure...</p>
+        <pre><code class="language-ruby">beat_machine.cycle() do |beat, instrs|
+    puts "#{beat}: #{instrs}"
+    sleep(0.3)
+end</code></pre>
+        <p class="blog-text">Output:</p>
+        <code class="language-ruby">one: ["Hi-hat", "Bass"]</code>
+        <code class="language-ruby">two: []</code>
+        <code class="language-ruby">three: ["Hi-hat"]</code>
+        <code class="language-ruby">four: []</code>
+        <code class="language-ruby">five: ["Hi-hat", "Snare"]</code>
+        <code class="language-ruby">six: []</code>
+        <code class="language-ruby">seven: ["Hi-hat", "Bass"]</code>
+        <code class="language-ruby">eight: []</code>
+        <code class="language-ruby">nine: ["Hi-hat"]</code>
+        <code class="language-ruby">ten: []</code>
+        <code class="language-ruby">eleven: ["Hi-hat", "Bass"]</code>
+        <code class="language-ruby">twelve: []</code>
+        <code class="language-ruby">thirteen: ["Hi-hat", "Snare"]</code>
+        <code class="language-ruby">fourteen: []</code>
+        <code class="language-ruby">fiveteen: ["Hi-hat"]</code>
+        <code class="language-ruby">sixteen: []</code>
+        <code class="language-ruby">one: ["Hi-hat", "Bass"]</code>
+        <code class="language-ruby"># and on and on and on and.....</code>
+      <p class="blog-text">Here is how the beat looks on a drum machine. Click on the drum-machine to hear the beat</p>
+        <audio id="sound1" src="../audio/drum_machine_audio.m4a" preload="auto"></audio><a class="" onclick="document.getElementById('sound1').play();"><img src="../imgs/drum_machine_beat.png" alt="Sick beat!!!"></a>
         
-        <h3 class="blog-header">Closing Header</h3>
+        <h3 class="blog-header"></h3>
+
+ 
+ 
+
         <dl>
           <dt>Things That We Learned:</dt>
           <dd>
