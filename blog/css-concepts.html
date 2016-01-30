@@ -5,33 +5,33 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /> 
     <link href="../stylesheets/prism.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../stylesheets/style.css">
-    <link rel="stylesheet" href="../stylesheets/blog.css">
-    
+    <link rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">    
   </head>
+
   <body>
     <header class="header-wrap">      
-        <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
-        <nav class="top-nav">
+      <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
+        </ul>
+      </nav>      
+      <section class="intro-greeting">          
+        <h2 class="current-page page-header">Intro To Css</h2>
+        <h3 class="sub-title">MAN, YOU GOT STYLE...</h3>
+        <h4>01/03/2016</h4>
+        <nav class="arrow-nav intro-greeting-last">
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
-          </ul>
-        </nav>      
-        <section class="intro-greeting">          
-          <h2 class="current-page page-header">Intro To Css</h2>
-          <h3 class="sub-title">MAN, YOU GOT STYLE...</h3>
-          <h4>01/03/2016</h4>
-          <nav class="arrow-nav intro-greeting-last">
-            <ul class="nav-list">
-              <li class="nav-item"><a class="nav-link top-nav-link" href="git.html" title="prev blog">&#9664;</a></li>
-              <li class="nav-item"><a class="nav-link top-nav-link" href="blog-index.html" title="back">&#9650;</a></li>              
-              <li class="nav-item"><a class="nav-link top-nav-link" href="arrays-hashes.html" title="next blog">&#9658;</a></li>              
-            </ul>            
-          </nav>
-        </section>
-      </div>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="git.html" title="prev blog">&#9664;</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="blog-index.html" title="back">&#9650;</a></li>              
+            <li class="nav-item"><a class="nav-link top-nav-link" href="arrays-hashes.html" title="next blog">&#9658;</a></li>              
+          </ul>            
+        </nav>
+      </section>
     </header>
+
     <div class="text-width">
       <article class="main-content">
         <figure>
@@ -59,10 +59,10 @@
           <dd>A property of the box model that gives your element some room to breath; it's the equivalent of a yard.</dd>
         </dl>
         <dl>
-        <dl>
           <dt>Border</dt>
           <dd>A property of the box model that allows you to display the outside borders of your element, which includes the content and the padding. It's the Donald Trump of the box model; let's build a wall!</dd>
         </dl>
+        <dl>
           <dt>Margin</dt>
           <dd>This is like your force-field, it's not part of the element but it protects the element from it's neighbors; stay off my lawn!</dd>
         </dl>
@@ -147,14 +147,14 @@
         </dl>
         <dl>
           <dt>Congratulations on finishing! Here's a cookie:</dt>
-          <dd><img src="../imgs/cookie.png" alt="" width="40%"></dd>
-        </dl>
-          
+          <dd><img src="../imgs/cookie.png" alt="num num num"></dd>
+        </dl>          
       </article>
+
       <nav class="bottom-nav">
         <ul class="nav-list">
           <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Back To Top</a></li>
-          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Look At My Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="../portfolio/portfolio.html">Look At My Portfolio</a></li>
         </ul>
       </nav>
       <footer>
@@ -165,7 +165,7 @@
           <li class="nav-item"><a class="nav-link linkedin" href="www.linkedin.com" target="_blank"><img src="../imgs/webicon-github-m.png" alt="Link"></a></li>
         </ul>
       </footer>
-      </div>
-      <script src="../js/prism.js"></script>
+    </div>
+    <script src="../js/prism.js"></script>
   </body>
 </html>

@@ -4,57 +4,61 @@
     <title>Mitch Kroska</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /> 
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/default.css">
     <link rel="stylesheet" href="../stylesheets/blog.css">
   </head>
+
   <body>
     <header class="header-wrap">      
-        <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
-        <nav class="top-nav">
+      <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
+        </ul>
+      </nav>      
+      <section class="intro-greeting">          
+        <h2 class="current-page page-header">Version Control</h2>
+        <h3 class="sub-title">YOU GOTTA GIT UP TO GIT DOWN!</h3>
+        <h4>01/03/2016</h4>
+        <nav class="arrow-nav intro-greeting-last">
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
-          </ul>
-        </nav>      
-        <section class="intro-greeting">          
-          <h2 class="current-page page-header">Version Control</h2>
-          <h3 class="sub-title">YOU GOTTA GIT UP TO GIT DOWN!</h3>
-          <h4>01/03/2016</h4>
-          <nav class="arrow-nav intro-greeting-last">
-            <ul class="nav-list">
-              <li class="nav-item"><a class="nav-link top-nav-link" href="arrays-hashes.html" title="prev blog">&#9664;</a></li>
-              <li class="nav-item"><a class="nav-link top-nav-link" href="blog-index.html" title="back">&#9650;</a></li>              
-              <li class="nav-item"><a class="nav-link top-nav-link" href="css-concepts.html" title="next blog">&#9658;</a></li>              
-            </ul>            
-          </nav>
-        </section>
-      </div>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="arrays-hashes.html" title="prev blog">&#9664;</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="blog-index.html" title="back">&#9650;</a></li>              
+            <li class="nav-item"><a class="nav-link top-nav-link" href="css-concepts.html" title="next blog">&#9658;</a></li>              
+          </ul>            
+        </nav>
+      </section>
     </header>
+
     <div class="text-width">
-      <article class="main-content">        
-        <section>
-          <img src="../imgs/snowman.jpg" alt="blog 1 picture">
-          <h3 class="blog-header">Let's Figure Out What It Is.</h3>
-          <p class="blog-text">
-            Version control is a software system that tracks the changes made to a project and keeps a archivable back-log of the changes; It's like a high-tech, non-volitile, undo button. Version control allows you to go back in time and see the source of your project at that particular time. This is helpful, because if you majorly screw-up your program one day and can't find the source of the error, you can use version control to revert to a previous stable version on the program.    
-          </p>
-          <h3 class="blog-header">Let's Talk About Git</h3>
-          <p class="blog-text">
-            Git was a creation of neccessity. The creaters of Git were people who were developing for the open source project of Linux. They had been using another kind of version control called, BitKeeper. But the relationship between the company that owns BitKeeper and the Linux developers fell through, so the Linux developers began working on their own version of version control; most credit is given to Linus Torvalds, who also created Linux. Their requirments for this new VCS included:
-            <ul class="blog-list">
-              <li>Be Speedy</li>
-              <li>Simple Design</li>
-              <li>Strong Support for non-linear development(meaning bunches of parallel branches)</li>
-              <li>Fully distributed(Whatever that means)</li>
-              <li>Able to handle Large projects while still being responive and quick</li>
-            </ul>
-          </p>
-          <h3 class="blog-header">Let's Talk About GitHub</h3>
-          <p class="blog-text">
-              GitHub is a website that functions as a web-based git repository. Where Git is only alive locally on computers, GitHub allows you to store your git repositories on the web. That's pretty Neat! This comes in handy because say, if you spill a gallon of milk on your laptop and loss everything, you will still have the files hosted on GitHub. It also makes working with a team of people easier because it allows for people to contribute to the project, no matter where they are and it keeps everybody on the same page by keeping master copy of the project and making sure that people aren't steping on each others toes. One other plus to using GitHub is you can display amazing code to the world, including potential employers.
-          </p>
-          <h3 class="blog-header">So What Did We Learn?</h3>
-          <p>
+      <article class="main-content">
+        <img src="../imgs/snowman.jpg" alt="blog 1 picture">
+        <h3 class="blog-header">Let's Figure Out What It Is.</h3>
+        <p class="blog-text">
+          Version control is a software system that tracks the changes made to a project and keeps a archivable back-log of the changes; It's like a high-tech, non-volitile, undo button. Version control allows you to go back in time and see the source of your project at that particular time. This is helpful, because if you majorly screw-up your program one day and can't find the source of the error, you can use version control to revert to a previous stable version on the program.    
+        </p>
+
+        <h3 class="blog-header">Let's Talk About Git</h3>
+        <p class="blog-text">
+          Git was a creation of neccessity. The creaters of Git were people who were developing for the open source project of Linux. They had been using another kind of version control called, BitKeeper. But the relationship between the company that owns BitKeeper and the Linux developers fell through, so the Linux developers began working on their own version of version control; most credit is given to Linus Torvalds, who also created Linux. Their requirments for this new VCS included:</p>
+        <ul class="blog-list">
+          <li>Be Speedy</li>
+          <li>Simple Design</li>
+          <li>Strong Support for non-linear development(meaning bunches of parallel branches)</li>
+          <li>Fully distributed(Whatever that means)</li>
+          <li>Able to handle Large projects while still being responive and quick</li>
+        </ul>
+
+        <h3 class="blog-header">Let's Talk About GitHub</h3>
+        <p class="blog-text">
+            GitHub is a website that functions as a web-based git repository. Where Git is only alive locally on computers, GitHub allows you to store your git repositories on the web. That's pretty Neat! This comes in handy because say, if you spill a gallon of milk on your laptop and loss everything, you will still have the files hosted on GitHub. It also makes working with a team of people easier because it allows for people to contribute to the project, no matter where they are and it keeps everybody on the same page by keeping master copy of the project and making sure that people aren't steping on each others toes. One other plus to using GitHub is you can display amazing code to the world, including potential employers.
+        </p>
+      
+        <h3 class="blog-header">So What Did We Learn?</h3>
+        <dl>
+          <dt>Things That We Learned:</dt>
+          <dd>
             <ul class="blog-list">
               <li>Version Control is a way to take snap-shoots of your project progressively in time, and allows you to go back to those snap-shoots if you need to. </li>
               <li>Break your Code? No Big deal, just go back in time.</li>
@@ -63,16 +67,18 @@
               <li>GitHub is great for teams, because it keeps everyone up-to-date and in-check.</li>
               <li>GitHub functions as a remote repository so if your computer crashes your code is still save.</li>
               <li>GitHub is used as a portfolio for coders.</li>
-            </ul>
-          </p>            
-        </section>
+            </ul>    
+          </dd>
+        </dl>
       </article>
+
       <nav class="bottom-nav">
         <ul class="nav-list">
           <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Back To Top</a></li>
-          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Look At My Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="../portfolio/portfolio.html">Look At My Portfolio</a></li>
         </ul>
       </nav>
+      
       <footer>
         <h2 class="section-label">Contact</h2>
         <ul class="nav-list">
@@ -81,6 +87,6 @@
           <li class="nav-item"><a class="nav-link linkedin" href="www.linkedin.com" target="_blank"><img src="../imgs/webicon-github-m.png" alt="Link"></a></li>
         </ul>
       </footer>
-      </div>
+    </div>
   </body>
 </html>
