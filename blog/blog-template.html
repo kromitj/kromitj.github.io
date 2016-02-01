@@ -8,15 +8,6 @@ What new semantic elements did you learn about (if any)?
     + main
     Wire Frame Link:
     [WireFrame](imgs/wire_template.png) -->
-<?php 
-  if($_POST) {
-    $name = $_POST['name'];
-    $comment = $POST['commentContent'];
-    $handle = fopen('../comments/comments.html', 'a');
-    fwrite($handle, "<b>" . $name . "</b>:<br/>" . $comment . "<br/>");
-    fclose($handle);
-  }
- ?>
 
 <!DOCTYPE html>
 <html>
@@ -80,18 +71,7 @@ What new semantic elements did you learn about (if any)?
           <li class="nav-item"><a class="nav-link bottom-nav-link" href="../portfolio/portfolio.html">Look At My Portfolio</a></li>
         </ul>
       </nav>
-      <section class="write-comment">
-        <form action="" method = "POST">
-          <label for="commentContent">Comment:</label>
-          <textarea name="commentContent" id="commentContent" cols="30" rows="10"></textarea><br>
-          <label for="name">Name:</label>
-          <input type="text" name="name" id="name"><br>
-          <input type="submit" value="Post!"><br>
-        </form>
-      </section>
-      <section class="comments">
-        <?php include "../comments/comments.html"; ?>
-      </section>
+      
       <footer>
         <h2 class="section-label">Contact</h2>
         <ul class="nav-list">
