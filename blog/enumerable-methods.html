@@ -18,9 +18,9 @@
         </ul>
       </nav>      
       <section class="intro-greeting">          
-        <h2 class="current-page page-header">Don't Hate, Enumberate</h2>
-        <h3 class="sub-title">LETS GET SOME POWER-UPS</h3>
-        <h4>xx/xx/xxxx</h4>
+        <h2 class="current-page page-header">Don't Hate, Enumerate</h2>
+        <h3 class="sub-title">WE'RE GUNNA MAKE A DRUM-MACHINE!</h3>
+        <h4>01/30/2016</h4>
         <nav class="arrow-nav intro-greeting-last">
           <ul class="nav-list">
             <li class="nav-item"><a class="nav-link top-nav-link" href="arrays-hashes.html" title="prev blog">&#9664;</a></li>
@@ -37,18 +37,17 @@
           <figcaption>What do you mean you forgot the fish-eye lens?...</figcaption>
         </figure>              
         
-        <h3 class="blog-header">Enumberables Everyone!</h3>
-        <p class="blog-text">Enermable is a <em>mixin</em> that allows collection classes,
+        <h3 class="blog-header">Enumerables Everyone!</h3>
+        <p class="blog-text">Enumerable is a <em>mixin</em> that allows collection classes,
         like Arrays and Hashes, the ability to easily traverse, search and sort within themselfs 
-        throught the use of the mixins methods.</p>
+        through the use of the mixins methods.</p>
         <h3 class="blog-header">Whats a mixin?</h3>
-        <p class="blog-text">Mixins are <em><a href="#">Modules</a></em> that are "missed in" to a class,givin
-        that Class access to the Modules methods. Mixins are like a power upgrades in Mario; You can give your Array fire-power, and give your Hashes Yoshi! Mixins 
-        allow for a class to inherit functionality from multiple sources; this is good becuase Ruby only allows
+        <p class="blog-text">Mixins are <em><a href="http://ruby-doc.com/docs/ProgrammingRuby/html/tut_modules.html" target="_blank">Modules</a></em> that are "mixed into" a Class, giving that Class access to the Modules methods. Mixins are like a power upgrades in Mario; you can give your Array fire-power, and give your Hashes Yoshi! Mixins allow for a class to inherit functionality from multiple sources; this is good becuase Ruby only allows
         <em>single inheritance</em>; mixins are a sort-of work around that.</p>
-        <h3 class="blog-header">Back To Enumberables</h3>
-        <p class="blog-text">Enumerable offers many <em>very</em> useful <a href="http://ruby-doc.org/core-2.2.3/Enumerable.html">methods</a>
-        These methods have differant iterations for Arrays and Hashes. like here is the Enumerable#each method being used 
+
+        <h3 class="blog-header">Back To Enumerables</h3>
+        <p class="blog-text">Enumerable offers many <em>very</em> useful <a href="http://ruby-doc.org/core-2.2.3/Enumerable.html" target="_blank">methods</a>
+        These methods have different iterations for Arrays and Hashes. Like here is the Enumerable#each method being used 
         with an Array then with a Hash:</p>
         <code class="language-ruby">mario_characters = [Mario, Yoshi, Bowser, Peach, Toad]</code>
          <code class="language-ruby">character_size = { Mario: 'Medium', Yoshi: 'Medium', Bowser: 'Large',
@@ -67,22 +66,24 @@
         <code class="language-ruby">Peach: Medium</code>
         <code class="language-ruby">Toad: Small</code>
         
-        <p class="blog-text">The <em>Emumerate#each</em> method iterates through, get this, each
-        of the elements of the Array and what-ever code you put inside the block will be executed
-        once for every element with the current element available for use thorugh the variables inside 
-        the pipes, <em>| |</em>.</p>
+        <p class="blog-text">The <em><a href="http://ruby-doc.org/core-1.9.3/Array.html#method-i-each" target="_blank">Enumerable#each</a></em> method iterates through each
+        of the elements of the Array/Hash and what-ever code you put inside the block will be executed
+        once for every element with the current element available for use through the variables inside 
+        the pipes: <em>| |</em>.</p>
         
         <h3 class="blog-header">How About One to Inpress Your Friends?</h3>
-        <p class="blog-text">Now, we're going to go over an Enumerator that you may never use, but 
-        who cares, it's a method. The method is <em>Enumberable#cyle</em> and here is its <a href="#">
+        <p class="blog-text">Now, we're going to go over an Enumerable that you may never use, but 
+        who cares, it's a method. The method is <em><a href="http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-cycle" target="_blank">Enumerable#cyle</a></em> and here is its <a href="https://en.wikipedia.org/wiki/Type_signature" target="_blank">
         method signature:</a></p>
         <code class="language-ruby">cycle(n=nil) { |obj| block } → nil</code>
         <code class="language-ruby">cycle(n=nil) → an_enumerator</code>
-        <p class="blog-text">The signatures is saying the method takes a parameter which is nil by default
-        then inside the block is making available the current element of the Array or Hash and execute 
+        <p class="blog-text">A method signature includes the method's return type, the number of arguments, the types of arguments, or errors it may pass.The signature is saying the method takes a parameter which is nil by default
+        then inside the block is making available the current element of the Array or Hash and executing 
         the code put inside the block. The method will do this however many times you specified as the
         parameter, if you give no parameter it will cycle for inifinity, where as if you 
-        put 3, it will cycle three times. Let's do something fun with this; let's make a beat machine:</p>
+
+        put 3, it will cycle three times. Let's do something fun with this; let's make a drum-machine:</p>
+
         <audio id="sound2" src="../audio/beastie_boys_audio.m4a" preload="auto"></audio>
         <p class="blog-text">First lets build the beat based of a Beastie Boys lyric, <em onclick="document.getElementById('sound2').play();">Click here to hear audio-clip</em></p>
         <dl>
@@ -94,8 +95,9 @@
          :four => [], :five => ['Hi-hat','Snare'], :six => [], :seven => ['Hi-hat','Kick'],
          :eight => [], :nine => ['Hi-hat','Kick'], :ten => [], :eleven => ['Hi-hat','Kick'],
          :twelve => [], :thirteen => ['Hi-hat','Snare'], :fourteen => [], :fiveteen => ['Hi-hat'],
-         :sixteen => ['Hi-hat','Kick'],}</code>
-         <p class="blog-text">Now Lets use Enumerable#cycle to infinity cycle through all the beats of the measure...</p>
+
+         :sixteen => []}</code>
+         <p class="blog-text">Now Lets use Enumerable#cycle to infinitely cycle through all the beats of the measure...</p>
         <pre><code class="language-ruby">drum_machine.cycle() do |beat, instrs|
     puts "#{beat}: #{instrs}"
     sleep(0.3)
@@ -124,15 +126,23 @@ end</code></pre>
         <a class="" onclick="document.getElementById('sound1').play();">
           <img src="../imgs/drum_machine_beat.png" alt="Sick beat!!!">
         </a>        
+<<<<<<< HEAD
         <h3 class="blog-header">Did We Just Learn About Drum Machines or Enumerables?</h3>
+=======
+        <h3 class="blog-header">Was This Post About Drum Machines or Enumerables?</h3>
+>>>>>>> 4adbca1f44da860ee63b72c6ca5614b8b995e2ba
         <dl>
           <dt>Things That We Learned:</dt>
           <dd>
             <ul class="blog-list">
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, voluptatum?</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, aliquid?</li>
+              <li>I learned how add audio to HTML. #sorrynotsorry</li>
+              <li>Mixins are Modules that give classes access to their methods</li>
+              <li>Enumerable is a Mixin that gives Arrays and Hashs many searching, traversing and sorting methods/functionality</li>
+              <li>Enumerable#cycle is the same as the Enumerable#each method except you can make it
+              iterate more then once</li>
+              <li>Methods that include blocks have tokens inside the pipes, and these are used as
+              arguments for the block</li>
+              <li>How to make a head-banger beat!</li>
             </ul>
           </dd>
         </dl>

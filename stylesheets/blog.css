@@ -15,12 +15,12 @@ code {
 
 .blog-entry-img {
   position: relative;
-  top: -10px;
+  top: 5px;
   right: -10px;
   float:left;
   margin-right: 20px;
-  height: 90px;
-  width: 90px;
+  height: 100px;
+  width: 100px;
 }
 
 .blog-entry-title {  
@@ -29,8 +29,8 @@ code {
 }
 
 .blog-entry-subtitle {
-  margin-top: 15px;
-  line-height: 100%
+  margin-top: 5px;
+  line-height: 90%
 }
 
 .blog-header {
