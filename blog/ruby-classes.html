@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mitch Kroska</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /> 
+    <link rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <link href="../stylesheets/prism.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header-wrap">      
+      <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
+        </ul>
+      </nav>      
+      <section class="intro-greeting">          
+        <h2 class="current-page page-header">Making Classes In Ruby</h2>
+        <h3 class="sub-title">WERE GOIN DOWN TO SOUTH PARK!</h3>
+        <h3>Blog: 7</h3>
+        <h4>02/07/2016</h4>
+        <nav class="arrow-nav intro-greeting-last">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link top-nav-link" href="enumerable-methods.html" title="prev blog">&#9664;</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="BLOG-INDEX.HTML" title="back">&#9650;</a></li>              
+            <li class="nav-item"><a class="nav-link top-nav-link" href="command-line.html" title="next blog">&#9658;</a></li>              
+          </ul>            
+        </nav>
+      </section>
+    </header>
+    <div class="text-width">
+      <article class="main-content">
+        <figure>
+          <img src="../imgs/southpark.jpeg" alt="Num Num Arrays are Yummy">
+          <figcaption></figcaption>
+        </figure>              
+        
+        <h3 class="blog-header">A Little History on Object-Orientated Programming</h3>
+        <p class="blog-text">Ruby is a <a href="#">Object-Orientated Language</a>, a paradigm that came into it's own in the 1980's with the growth of <a href="#"></a>C++</a>; there were many O.O. languages before, but C++ took the wildly popular <a href="#">C</a> language and gave a wrapper around it that allowed it to function in a OOP manner. The underlining C'ness of C++ allowed it to be adapted quickly. Before the influx of OOP, programmers followed the <a href="#">Procedural</a> paradigm of programming, which organized instructions into groups that perform one task; this one task is called a <em>procedure.</em> The procedure was a named method that included a structured block of instructions, that would be executed every time the program called the procedure by name. This was all gravy, but programmers began to wish that programs could more accurately and easily mimic the real world. It was defined that the world is made up of objects and every object has a certain amount of attributes and behavior; this is the bread and butter of the OOP paradigm. It is coming from a place were we structure the program into objects, where each object has its own unique abilities and attributes; this grouping of behavior and properties is called, encapsulation. In other words, encapsulation is forming a new object by grouping together related things, like a key-chain groups together a bunch of keys, which are all have similar behavior but have different properties. In OOP, encapsulation is grouping together attributes and behaviors to form a object.</p>
+        <figure>
+          <img src="../imgs/oop-pic.png" alt="Pic of Dog Object">
+          <figcaption>Here is a dog being represented from an Object-Orientated perspective. This demonstrates the class Dog, which defines the attributes and behaviors of all Dog objects. And to the right is an Object of the Dog class, named Rayne, and you can also see all the specific attribute values of Rayne.</figcaption>
+        </figure>
+        <h3 class="blog-header">Enough Already, Let's Make A Class</h3>
+        <p class="blog-tex">Alright, well we're going to create a class encapsulates the the attributes and behaviors of South Park Characters. Let's see the line up :</p>
+        <figure>
+          <img src="../imgs/southpark_characters.png" alt="Characters of South Park">
+          <figcaption>From left-to-right: Kyle, Stan, Kenny, Cartman</figcaption>
+        </figure>
+        <p class="blog-text">So the Class name is going to be Character and the first thing we are going to do is define important attributes and behaviors that all the characters have:</p>
+        <dl>
+          <dt>Attributes:</dt>
+          <dd>
+            <ul class="blog-list">
+              <li>First Name: String</li>
+              <li>Last Name: String</li>
+              <li>Wears Hat?: Bool</li>
+              <li>Shirt Color: String</li>
+            </ul>
+          </dd>
+          <dt>Behaviors:</dt>
+          <dd>
+            <ul class="blog-list">
+              <li>Say Curse Word</li>
+              <li>Fake Butters Death</li>
+              <li>Play Guitar Hero</li>
+            </ul>
+          </dd>
+        </dl>
+        <p class="blog-text">Now we will write the class definition and create an instance object of the class:</p>
+        <pre><code class="language-ruby">
+class Character
+  def initialize(first, last, has_hat, shirt_color)
+    @first_name = first
+    @last_name = last
+    @wears_hat = has_hat
+    @shirt_color = shirt_color
+  end
+end # end of class definition
+
+kyle = Character.new("Kyle", "Broflovski", true, "Orange")
+
+Character:0x007f8fb0ab0f08 @first_name="Kyle", @last_name="Broflovski", @wears_hat=true, @shirt_color="Orange" # terminal output
+
+        </code></pre>
+        <p class="blog-text">What is happening in the above code is we are defining a class with a name of Character, then inside of the class we are defining a method, it is named "initialize", which is a method that is inherited from the Object class, most if not all classes automatically inherit from this class. But anyway, the initialize method takes 4 arguments, and then assigns their values to Class' instance variables, which are the same thing as attributes. <em>Note: the "@" in-front of the instance variables just defines them to be an instance variable.</em> With the initialize method defined you can now create your very own instance objects of the class; that is what the local variable named kyle is being assigned to. If your wondering why we didn't call the "initialize" method when created the object, it's because the "new" method is actually behind the scenes calls "initialize"; confusing, I know! The final line just shows what the terminal outputs as the Character object.</p>
+        <p class="blog-text">Now, let's add some functionality to the <em>Character</em> class. In the specs, we described that we wanted a functionality of the Character class to be curing, so lets give them this much needed skill:</p>
+        <pre><code class="language-ruby">
+class Character
+  def initialize(first, last, has_hat, shirt_color)
+    @first_name = first
+    @last_name = last
+    @wears_hat = has_hat
+    @shirt_color = shirt_color
+  end
+  # new method will be created here...
+  def say_curse
+    puts "God Damn-it, Kyle!!!"
+  end
+end # end of class definition
+
+cartman = Character.new("Eric", "Cartman", true, "Red")
+cartman.say_curse
+God Damn-it, Kyle!!! # termainal output
+        </code></pre>
+        <p class="blog-text">So this shows us adding functionality to the Character class; the functionality of being able swearing! I would like you to add the other behaviors we outlined in the spec portion and also add a few new attributes like, hat or glove color.</p>
+        <h3 class="blog-header">Scew You Guys! I'm Gonna Make a Class!</h3>
+        <dl>
+          <dt>Things That We Learned:</dt>
+          <dd>
+            <ul class="blog-list">
+              <li>OOP is designed to emulate the real world and all it's <em>objects!</em></li>
+              <li>Objects are seen as a combination of it's attributes and its behaviors</li>
+              <li>attributes == properties == instance variables</li>
+              <li>behaviors == method == function</li>
+              <li>Encapsulation is the main benifit of useing OOP</li>
+              <li>OOP stands for: Object-Orientated Programming</li>
+              <li>You can create your own classes</li>
+              <li>Ruby has a bunch of built-in-classes</li>
+            </ul>
+          </dd>
+        </dl>
+      </article>
+
+      <nav class="bottom-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Back To Top</a></li>
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="../portfolio/portfolio.html">Look At My Portfolio</a></li>
+        </ul>
+      </nav>
+      
+      <footer>
+        <h2 class="section-label">Contact</h2>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link twitter" href="https://twitter.com/MitchKroska" target="_blank"><img src="../imgs/webicon-twitter-m.png" alt=""></a></li>
+          <li class="nav-item"><a class="nav-link facebook" href="https://www.facebook.com/mitch.kroska" target="_blank"><img src="../imgs/webicon-facebook-m.png" alt="Facebook"></a></li>
+          <li class="nav-item"><a class="nav-link linkedin" href="www.linkedin.com" target="_blank"><img src="../imgs/webicon-github-m.png" alt="Link"></a></li>
+        </ul>
+      </footer>
+    </div> 
+    <script src="../js/prism.js"></script>
+  </body>
+</html>
