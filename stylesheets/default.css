@@ -51,9 +51,14 @@ img {
 }
 
 .name-logo {
+  font-size: 2.618em;
   margin-left: 5%;
   display: inline-block;
   color: #FFFFFF;
+}
+
+.navigation {
+  font-size: 1em;
 }
 
 .nav-item {
@@ -81,7 +86,7 @@ a.nav-link:hover, a.nav-link:active {
 }
 
 .page-header {
-	font-size: 35px;
+  font-size: 1.618em;
   margin: 15px;
 }
 
@@ -91,7 +96,8 @@ a.nav-link:hover, a.nav-link:active {
 }
 
 .sub-title {
-  color: #6DBCDB;
+  font-size: 1.33em;
+  color: #2C3E50;
   font-weight: lighter;
   margin-bottom: 15px;  
 }

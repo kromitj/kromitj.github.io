@@ -1,6 +1,6 @@
 code {
   display: block;
-  font-size: 13px;
+  font-size: 0.75em;
 }
 
 .blog-entries {
@@ -23,17 +23,20 @@ code {
   width: 100px;
 }
 
-.blog-entry-title {  
+.blog-entry-title {
+  font-size: 1.618em;  
   margin-bottom: 0px;
   line-height: 150%;
 }
 
 .blog-entry-subtitle {
+  font-size: 1em;
   margin-top: 5px;
   line-height: 90%
 }
 
 .blog-header {
+  font-size: 1.618em;
   padding-top: 20px;
   color: #FC4349;
 }
@@ -46,12 +49,16 @@ code {
   line-height: 180%;
   font-weight: 600;
   color: #2C3E50;
-  font-size: 16px;
+  font-size: 1em;
+}
+
+.blog-num, .blog-date {
+  color: #2C3E50;
 }
 
 .blog-text {
-  line-height: 140%;
+  line-height: 29px;
   font-family: georgia;
-  font-size: 18px;
+  font-size: 1.1em;
 }
 
