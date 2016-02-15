@@ -18,9 +18,10 @@
         </ul>
       </nav>      
       <section class="intro-greeting">          
-        <h2 class="current-page page-header">Ruby Classes Vs. JavaScript Constructor Functions</h2>
+        <h2 class="current-page page-header">Ruby Classes Vs. JavaScript Prototypes</h2>
         <h3 class="sub-title">LETS GET READY TO RUMBLE!</h3>
-        <h4>xx/xx/xxxx</h4>
+        <h3>Blog: 8</h3>
+        <h4>02/14/2016</h4>
         <nav class="arrow-nav intro-greeting-last">
           <ul class="nav-list">
             <li class="nav-item"><a class="nav-link top-nav-link" href="ruby-classes.html" title="prev blog">&#9664;</a></li>
@@ -33,22 +34,101 @@
     <div class="text-width">
       <article class="main-content">
         <figure>
-          <img src="../imgs/placeholder.png" alt="Num Num Arrays are Yummy">
-          <figcaption>Caption text for above picture</figcaption>
+          <img src="../imgs/monty-python.jpg" alt="Num Num Arrays are Yummy">
+          <figcaption>Tis' but a scratch!</figcaption>
         </figure>              
-        
-        <h3 class="blog-header">First Header</h3>
-        <p class="blog-text">Lorem ipsum <em>dolor sit amet</em>, consectetur adipisicing elit. Nostrum, eaque! Quia iste at accusamus sed, accusantium perspiciatis quaerat necessitatibus dignissimos dolorum sunt consequatur distinctio recusandae deserunt beatae dicta voluptatibus voluptate, amet libero blanditiis aliquam! Officia reprehenderit corrupti quae quo, dignissimos repellat animi praesentium sed. Voluptatibus tempore quae doloribus, laudantium ex repellat provident culpa asperiores, ducimus repudiandae, magnam fugit natus qui rerum ut in commodi illum harum excepturi error cumque dignissimos dolorem incidunt. Minus eum cum voluptate aut nihil et, odio aliquid quas non fuga, ex. Minus, ullam nemo illo voluptate. Voluptatibus beatae tenetur aliquid sequi facilis, consequatur ipsam perferendis incidunt, eaque, quibusdam nihil, excepturi cupiditate. Consequuntur inventore non saepe debitis voluptates. Veniam sint quae voluptas eligendi, odio ratione animi ipsum quo. Facere provident pariatur quas non eaque odit praesentium placeat, mollitia, dolore nihil voluptas. Dicta, reprehenderit possimus, reiciendis maiores aperiam, odio at, facilis aut distinctio dolore non quos ratione! Excepturi tenetur, eos commodi maxime dignissimos iusto magni veritatis numquam quae, consequuntur! Debitis deserunt dolorem adipisci ab iusto quidem, odio similique saepe tempora beatae numquam animi consectetur, enim culpa laudantium nisi dignissimos! A quia mollitia eos veniam corporis dolore impedit ut animi saepe expedita nobis minima consequuntur, quisquam ipsum magnam libero!</p>
-        <code class="language-ruby">example_code = ['1st piece', '2nd piece', '3rd piece', '4th piece', '5th piece', '6th piece', '7th piece']</code>
-        <h3 class="blog-header">Closing Header</h3>
+        <h3 class="blog-header">How Are Ruby and JavaScrip Different</h3>
+        <p class="blog-text">This blog post is going to go over how Ruby and JavaScript handle OOP programing in different ways. The difference can seam really
+        large when you go from Ruby to JavaScript, so I'm going to compare them against each other and you will see there differences but will also see that fundamentally they allow for very similar OOP principles, most importanly the concept of encapsulation of properties and methods and inheritance.
+        </p>
+        <h3 class="blog-header">In The Red corner, Ruby...</h3>
+        <p class="blog-text"><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)" target="_blank">Ruby</a> is object0-orientated programming language that handles classes in a very classical way; if you know java or c++ then the way manner in which Ruby handles inheritence and the decloration of classes will be easy to grasp. I will now declear a class in Ruby and create an instance of it:</p>
+         <pre><code class="language-ruby">
+class Character
+  def initialize(first, last, has_hat, shirt_color)
+    @first_name = first
+    @last_name = last
+    @wears_hat = has_hat
+    @shirt_color = shirt_color
+  end
+  def spew_info
+    puts "This characters name is #{#first_name} #{@last_name}, and their shirt color is #{@shirt_color}."
+  end
+end # end of class definition
+
+
+kyle = Character.new("Kyle", "Broflovski", true, "Orange")
+kyle.spew_info 
+=> This characters name is Kyle Broflovski, and their shirt color is Orange.
+
+        </code></pre>
+        <p class="blog-text">Here we can see a class with a name of Character being declared with instance variables and one instance method. Now let's create another class that inherites from the Character class:</p>
+        <pre><code class="language-ruby">
+class Character < MainCharacter
+  def initialize(first, last, has_hat, shirt_color, catch-phrase)
+    super(first, last, has_hat, shirt_color)
+    @catch_prase = catch_phrase
+  end
+
+  def say_catch_prase
+    puts @catch_prase
+  end  
+end # end of class definition
+
+
+kyle = MainCharacter.new("Kyle", "Broflovski", true, "Orange", "Oh my God, they killed Kenny!' 'You bastards!")
+kyle.spew_info 
+=> This characters name is Kyle Broflovski, and their shirt color is Orange.
+kyle.say_catch_phrase
+=> Oh my God, they killed Kenny!' 'You bastards!
+
+        </code></pre>
+        <p class="blog-text">So here we can see that during the initialize method of MainCharacter that <em>super</em> calles the initialize method of Character, setting up all the inherited instance vars. Then it assignes a new instance variable and declears a new method called say_catch_phrase. This is all cool and neat, but how would we do this in JavaScript?</p>
+        <h3 class="blog-header">In The Yellow Corner, JavaScript...</h3>
+        <p class="blog-text"><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> follows OOP principles, but to get technical it is a <a href="https://en.wikipedia.org/wiki/Prototype-based_programming" target="_blank">Prototype-based</a> language, which I could try to explain, but I think that seeing it in action is a better way to understand this. We will now create the same Classes that we had in Ruby in JavaScript:</p>
+         <pre><code class="language-javascript">
+function Character(first, last, hasHat, shirtColor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.wearsHat = hasHat;
+  this.shirtColor = shirtColor;
+  this.spewInfo = function() {
+    console.log("This Characters name is " + this.firstName + " " + this.lastName + ", and their shirt color is " + this.shirtColor); 
+  };
+};
+
+var kyle = new Character("Kyle", "Broflovski", true, "Orange");
+kyle.spewInfo;
+=> This characters name is Kyle Broflovski, and their shirt color is Orange.
+
+        </code></pre>
+        <p class="blog-text">So here we can see the Javascript version and it looks weird, I know. But, what we have made is a constructor function. This gives us the functionality of a class, but here is where it gets interesting. With constructor functions you can add/remove attributes and methods at run-time, meaning after you've declared it; in Ruby you have to declare all attributes and methods in the class decloration. The ability to add/remove methods or attributes in JavaScript is due to the prototype-based part of the language; when you create an instance of a "class", we would say in JS, that you're actually cloning the prototype; if you had a clone machine and cloned an apple, the original apple would be prototype, clone would be the clone, and you would be free to modify the clone with out affecting the prototype. Here we will give an example of this.</p>
+ <pre><code class="language-javascript">
+ var kyle = new Character("Kyle", "Broflovski", true, "Orange");
+kyle.spewInfo;
+=> This characters name is Kyle Broflovski, and their shirt color is Orange.
+
+kyle.spewRandomJibberish = function() {
+  console.log("Hothagow othagold othagare yothagou?")
+};
+kyle.father = "Gerald";
+
+kyle.spewRandomJibberish();
+=> Hothagow othagold othagare yothagou?
+
+kyle.father;
+=> Gerald
+
+        </code></pre>
+        <p class="blog-text">This ability means that Javacript is alot less constrictive with how you choose to impliment OOP in your programs. It also gives a lot of ambiguity to how implement OOP in JavaScript, because of the way it seporates itself from the rigid class-based structure of other languages; I think JavaScript is super confusing because it seams like it doesn't know what it wants to be.</p>
         <dl>
           <dt>Things That We Learned:</dt>
           <dd>
             <ul class="blog-list">
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, voluptatum?</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, aliquid?</li>
+              <li>JavaScript is a Prototype-based Language</li>
+              <li>There is no formal way to create a class in JavaScript</li>
+              <li>You can add/remove attributes and methods at run-time in JavaScript</li>
+              <li>JavaScript is Silly</li>
             </ul>
           </dd>
         </dl>
