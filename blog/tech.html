@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mitch Kroska</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /> 
+    <link rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <link href="../stylesheets/prism.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header-wrap">      
+      <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li class="nav-item navigation"><a class="nav-link top-nav-link" href="../portfolio/portfolio.html">Portfolio</a></li>
+          <li class="nav-item navigation"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
+        </ul>
+      </nav>      
+      <section class="intro-greeting">          
+        <h2 class="current-page page-header">How Computer Memory Works</h2>
+        <h3 class="sub-title">WAIT...WHAT?...</h3>
+        <h3>Blog: 8</h3>
+        <h4>02/14/2016</h4>
+        <nav class="arrow-nav intro-greeting-last">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link top-nav-link" href="ruby-classes.html" title="prev blog">&#9664;</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="blog-index.html" title="back">&#9650;</a></li>              
+            <li class="nav-item"><a class="nav-link top-nav-link" href="command-line.html" title="next blog">&#9658;</a></li>              
+          </ul>            
+        </nav>
+      </section>
+    </header>
+    <div class="text-width">
+      <article class="main-content">
+        <figure>
+          <img src="../imgs/memory-clipart.png" alt="Num Num Arrays are Yummy">
+          <figcaption>Memory taken from MineCraft</figcaption>
+        </figure>              
+        <h3 class="blog-header">Let's Learn About The Memory</h3>
+        <p class="blog-text">Today we will be looking at the memory operation of an <a href=""></a>Arduino; a micro-controller, that is basically a little, cute, micro computer, that you can program to automate stuff for you. The Arduino is a good place to learn about computer memory because it has so little of it so when you're programming you have to be aware of how you're using memory. Here are the different kinds of memory and how much of it the Arduino has:</p>
+        <dl>
+          <dt>Flash:</dt>
+          <dd>
+            <ul class="blog-list">
+              <li>Used for holding the program image and initialized data</li>
+              <li>Available: 32K bytes(32,000 bytes or 256,000 bits)</li>
+              <li>Non-volatile, which means when powered off, it still remembers it's last state</li>
+              <li>Cannot be modified at run-time</li>
+              <li>100,000 write cycles, this is how many times it's memory can be erased and written</li>
+            </ul>
+          </dd>
+
+          <dt>SRAM: (Static Random Access Memory)</dt>
+          <dd>
+            <ul class="blog-list">
+              <li>Used for holding run-time program needs</li>
+              <li>Available: 2K bytes(2,000 bytes or 16,000 bits)</li>
+              <li>Volatile, which means when powered off it loses all state</li>
+              <li>Can be read and written to at run-time</li>
+              <li>SRAM is sub-divided into three categories:</li>
+              <dl>
+                <dt>Static Data:</td>
+                <dd>
+                  <ul>
+                    <li>reserved space for global and static variables</li>
+                    <li>Variables with initial values are copied from Flash to SRAM when the program starts</li>
+                  </ul>
+                </dd>
+                 <dt>Heap Data:</td>
+                <dd>
+                  <ul>
+                    <li>Dynamically allocated, grows from the top of Static data</li>
+                  </ul>
+                </dd>
+                <dt>Stack Data:</td>
+                <dd>
+                  <ul>
+                    <li>Used for local variables and maintaning a record of function calls</li>
+                    <li>Grows from the top of memory down towards the heap</li>
+                    <li>Every function call and variable allocation causes the stack to grow</li>
+                    <li>Returning from a function causes the local variables to disappear from the stack</li>
+                    <li>The stack grows and shrinks during runtime</li>
+                    <li>The stack is responsible for the "stack to deep" erreor you get during a recursive function</li>
+                  </ul>
+                </dd>
+              </dl>
+            </ul>
+          </dd>          
+        </dl>
+        <p class="blog-text">Here is a visual representation of the SRAM. you can see how the Stack grows from the top and the Heap grows from on top the Static data:</p>
+        <img src="../imgs/memory.gif" alt="Num Num Arrays are Yummy" height="500">
+        <h3 class="blog-header">What's the differenc between the Heap and the Stack?</h3>
+        <p class="blog-text">The stack is used when the size of memory needed is known, like a variable holding an Integer, or a Float. The heap is used when the size isn't known at run-time, like an object. </p>
+        <img src="../imgs/stack-heap.png" alt="Num Num Arrays are Yummy" height="500">
+      </article>
+
+      <nav class="bottom-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Back To Top</a></li>
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="../portfolio/portfolio.html">Look At My Portfolio</a></li>
+        </ul>
+      </nav>
+      
+      <footer>
+        <h2 class="section-label">Contact</h2>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link twitter" href="https://twitter.com/MitchKroska" target="_blank"><img src="../imgs/webicon-twitter-m.png" alt=""></a></li>
+          <li class="nav-item"><a class="nav-link facebook" href="https://www.facebook.com/mitch.kroska" target="_blank"><img src="../imgs/webicon-facebook-m.png" alt="Facebook"></a></li>
+          <li class="nav-item"><a class="nav-link linkedin" href="www.linkedin.com" target="_blank"><img src="../imgs/webicon-github-m.png" alt="Link"></a></li>
+        </ul>
+      </footer>
+    </div> 
+    <script src="../js/prism.js"></script>
+  </body>
+</html>
