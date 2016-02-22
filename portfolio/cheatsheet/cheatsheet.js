@@ -23,8 +23,6 @@ function Question(question, choiceA, choiceB, choiceC, choiceD, answer ) {
       this.highlightAnswer();
       return false;
     }
-    
-
   }  
 }
 function Questions(initialQuestions) {
@@ -91,10 +89,13 @@ function Game(questions) {
     }
     this.displayScore();
   }
-
+  this.clearFeedback = function() {
+    document.getElementById("feedback").innerHTML = '';
+  }
   
   this.nextQuestion = function() {
     this.currentQuestion.dehighlightAnswer();
+    this.clearFeedback();
     this.currentQuestion = this.questions.nextQuestion();
     console.log("current question: " + this.currentQuestion);
     this.askQuestion();
