@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../../stylesheets/default.css">
     <link rel="stylesheet" href="../../stylesheets/blog.css">
-    <link rel="stylesheet" type="text/css" href="game.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />     
   </head>
 
@@ -14,18 +13,18 @@
         <h1 class="name-logo "><a class="nav-link top-nav-link" href="../../index.html">Mitch Kroska</a></h1>
         <nav class="top-nav">
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link top-nav-link  current-page" href="../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link  current-page" href="#">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link top-nav-link" href="../../blog/blog-index.html">Blog</a></li>
           </ul>
         </nav>      
         <section class="intro-greeting">
-          <h2 class="current-page page-header">JavaScript Game</h2>
-          <h3 class="sub-title">IT'S PRETTY SNAZZY!</h3>
+          <h2 class="current-page page-header">Cheat Sheet</h2>
+          <h3 class="sub-title">CUZ I FORGET STUFF</h3>
           <nav class="arrow-nav intro-greeting-last">
             <ul class="nav-list">
-              <li class="nav-item"><a class="nav-link top-nav-link" href="../cheatsheet/cheat-sheet.html" title="previous">&#9664;</a></li>
+              <li class="nav-item"><a class="nav-link top-nav-link" href="../first-game/game.html" title="previous">&#9664;</a></li>
               <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio.html" title="back">&#9650;</a></li>              
-              <li class="nav-item"><a class="nav-link top-nav-link" href="../cheatsheet/cheat-sheet.html" title="next">&#9658;</a></li>              
+              <li class="nav-item"><a class="nav-link top-nav-link" href="../first-game/game.html" title="next">&#9658;</a></li>              
             </ul>            
           </nav>
         </section>
@@ -33,8 +32,22 @@
 
     <div class="text-width">
       <main class="main-content">
-        <canvas id="myCanvas" width="480" height="320"></canvas>
-        <h2>Use arrow keys to move the hero</h2>
+        <h2 id="score"></h2>
+        <div id="question"></div>        
+        <div id="choices">
+          <div id="A"></div>
+          <div id="B"></div>
+          <div id="C"></div>
+          <div id="D"></div>
+        </div>
+        <form action="">
+          Type Your Choice: (A, B, C or D)
+          <input type="text" id="user-guess">
+          <input name="buttonExecute" onclick="exampleGame.handleInput(document.getElementById('user-guess').value)" type="button" value="Enter" />
+        </form>
+        <div id="feedback"></div>
+        <input name="buttonExecute" onclick="exampleGame.nextQuestion()" type="button" value="Next Question" />
+        
       </main>
 
       <nav class="bottom-nav">
@@ -53,9 +66,6 @@
         </ul>
       </footer>
       </div>
-      <script src="game.js"></script>
+      <script src="cheatsheet.js"></script>
   </body>
 </html>
-
-
-
