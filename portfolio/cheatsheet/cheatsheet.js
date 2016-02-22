@@ -62,6 +62,12 @@ var questions = [
     "Array",
     "Char",
     "C"),
+  new Question("What is the result of 100/30 in Ruby if both are Ints?", 
+    "4",
+    "3",
+    "3.33333",
+    "3.5",
+    "B"),
 ];
 
 function Game(questions) {
