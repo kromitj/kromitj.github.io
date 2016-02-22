@@ -68,6 +68,18 @@ var questions = [
     "3.33333",
     "3.5",
     "B"),
+    new Question("Which of the following is a good commit message?", 
+    "changed something",
+    "Add sort function to People object",
+    "added sort function to People object",
+    "Don'worry about it",
+    "B"),
+     new Question("Go back two directories, then change into a directory called imgs.", 
+    "../../imgs",
+    "../2/imgs",
+    "..../imgs",
+    "2../imgs",
+    "A"),
 ];
 
 function Game(questions) {
