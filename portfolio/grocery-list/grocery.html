@@ -18,13 +18,13 @@
           </ul>
         </nav>      
         <section class="intro-greeting">
-          <h2 class="current-page page-header">Cheat Sheet</h2>
-          <h3 class="sub-title">CUZ I FORGET STUFF</h3>
+          <h2 class="current-page page-header">Grocery List</h2>
+          <h3 class="sub-title">WHAT DID I EVEN COME HERE FOR</h3>
           <nav class="arrow-nav intro-greeting-last">
             <ul class="nav-list">
-              <li class="nav-item"><a class="nav-link top-nav-link" href="../first-game/game.html" title="previous">&#9664;</a></li>
+              <li class="nav-item"><a class="nav-link top-nav-link" href="../cheatsheet/cheat-sheet.html" title="previous">&#9664;</a></li>
               <li class="nav-item"><a class="nav-link top-nav-link" href="../portfolio.html" title="back">&#9650;</a></li>              
-              <li class="nav-item"><a class="nav-link top-nav-link" href="../grocery-list/grocery.html" title="next">&#9658;</a></li>              
+              <li class="nav-item"><a class="nav-link top-nav-link" href="../first-game/game.html" title="next">&#9658;</a></li>              
             </ul>            
           </nav>
         </section>
@@ -32,22 +32,18 @@
 
     <div class="text-width">
       <main class="main-content">
-        <h2 id="score"></h2>
-        <div id="question"></div>        
-        <div id="choices">
-          <div id="A"></div>
-          <div id="B"></div>
-          <div id="C"></div>
-          <div id="D"></div>
-        </div>
-        <form action="">
-          Type Your Choice: (A, B, C or D)
-          <input type="text" id="user-guess">
-          <input name="buttonExecute" onclick="exampleGame.handleInput(document.getElementById('user-guess').value)" type="button" value="Enter" />
-        </form>
-        <div id="feedback"></div>
-        <input name="buttonExecute" onclick="exampleGame.nextQuestion()" type="button" value="Next Question" />
-        
+        <h1 class="main-header">Grocery List</h1>
+        <form class="add-item-form">
+            <label for="new-item">Add Item</label>
+            <input type="text" id="new-item">
+            <input name="push-new-item" onclick="GroceryApp.handleNewItem(document.getElementById('new-item').value)" type="button" value="Add"></input>
+          </form>
+          <div id="grocery-items"></div>
+          <form class="remove-item-form">
+            <label for="remove-item">Remove Item</label>
+            <input type="text" id="remove-item">
+            <input name="push-remove-item" onclick="GroceryApp.handleRemoveItem(document.getElementById('remove-item').value)" type="button" value="Add"></input>
+          </form>
       </main>
 
       <nav class="bottom-nav">
@@ -66,6 +62,6 @@
         </ul>
       </footer>
       </div>
-      <script src="cheatsheet.js"></script>
+      <script src="grocery.js"></script>
   </body>
 </html>
