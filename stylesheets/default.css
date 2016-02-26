@@ -78,6 +78,10 @@ a.nav-link:hover, a.nav-link:active {
   color: #6DBCDB;
 }
 
+.nav-link-bottom {
+  text-align: center;
+}
+
 .nav-list {
   list-style-type: none;
   margin: 0;
@@ -126,11 +130,14 @@ a.top-nav-link:link, a.top-nav-link:visited {
 }
 /* Moved current page to bottom, the underlining was white otherwise */
 
-.current-page {
+.nav-item .current-page {
   color : #FFFFFF;
-  text-decoration: underline;
   
 }
+
+/*a.nav-link.top-nav-link.current-page {
+  text-decoration: underline;
+}*/
 
 h2.current-page {
 	color: #FFFFFF;

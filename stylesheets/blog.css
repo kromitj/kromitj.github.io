@@ -11,6 +11,14 @@ code {
 
 .blog-entry {  
   margin-top: 60px;
+  border-bottom: solid;
+  border-width: 2px;
+  border-bottom-color: #FC4349;
+}
+
+.blog-entry a:hover, a:active {
+  color: #FC4349;
+  text-decoration: underline;
 }
 
 .blog-entry-img {
@@ -43,6 +51,7 @@ code {
 
 .blog-link {
   color: #6DBCDB;
+  text-decoration: none;
 }
 
 .blog-list {
