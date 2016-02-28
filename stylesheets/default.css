@@ -78,6 +78,10 @@ a.nav-link:hover, a.nav-link:active {
   color: #6DBCDB;
 }
 
+.nav-link.top-nav-link.current-page {
+  color: #FFFFFF;
+}
+
 .nav-link-bottom {
   text-align: center;
 }
@@ -130,7 +134,7 @@ a.top-nav-link:link, a.top-nav-link:visited {
 }
 /* Moved current page to bottom, the underlining was white otherwise */
 
-.nav-item .current-page {
+.nav-item.current-page {
   color : #FFFFFF;
   
 }
@@ -143,7 +147,6 @@ h2.current-page {
 	color: #FFFFFF;
 	text-decoration-color: ;
 }
-
 @media screen and (max-width: 1400px) {
   .text-width {
     margin-left: 20%;
