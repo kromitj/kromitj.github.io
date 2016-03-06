@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mitch Kroska</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /> 
+    <link rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+    <link href="../stylesheets/prism.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header-wrap">      
+      <h1 class="name-logo"><a class="nav-link top-nav-link" href="../index.html">Mitch Kroska</a></h1>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li class="nav-item navigation"><a class="nav-link top-nav-link" href="../portfolio/portfolio.html">Portfolio</a></li>
+          <li class="nav-item navigation"><a class="nav-link top-nav-link current-page" href="blog-index.html">Blog</a></li>
+        </ul>
+      </nav>      
+      <section class="intro-greeting">          
+        <h2 class="current-page page-header">How To Use The Zip Method</h2>
+        <h3 class="sub-title">LETS ASSIMALATE SOME ARRAYS</h3>
+        <h3>Blog: 10</h3>
+        <h4>03/06/2016</h4>
+        <nav class="arrow-nav intro-greeting-last">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link top-nav-link" href="tech.html" title="prev blog">&#9664;</a></li>
+            <li class="nav-item"><a class="nav-link top-nav-link" href="blog-index.html" title="back">&#9650;</a></li>              
+            <li class="nav-item"><a class="nav-link top-nav-link" href="command-line.html" title="next blog">&#9658;</a></li>              
+          </ul>            
+        </nav>
+      </section>
+    </header>
+    <div class="text-width">
+      <article class="main-content">
+        <figure>
+          <img src="../imgs/zip.png" alt="Num Num Arrays are Yummy">
+          <figcaption>One Fish, Two Fish, Red Fish, Blue Fish</figcaption>
+        </figure>              
+        <h3 class="blog-header">What Does The Zip Method Do?</h3>
+        <p class="blog-text">The <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-zip" target="_blank">zip</a> method is a great one to use if you combine arrays together in a certain way. Like say you have three groups of freinds wanting to play eachother on 3-on-3 basketball, each team must have one player from each clique; using the zip meethod would be perfect for this situation. Let see this in code:</p>
+         <pre><code class="language-ruby">
+clique_one = ['adam y','mike','adam h']
+clique_two = ['fatso','stinky','stretch']
+clique_three = ['beyonce','kelly','michelle ']
+
+new_teams = clique_one.zip(clique_two, clique_three)
+[
+    [0] [
+        [0] "adam y",
+        [1] "fatso",
+        [2] "beyonce"
+    ],
+    [1] [
+        [0] "mike",
+        [1] "stinky",
+        [2] "kelly"
+    ],
+    [2] [
+        [0] "adam h",
+        [1] "stretch",
+        [2] "michelle "
+    ]
+]
+        </code></pre>
+        <p class="blog-text">So we can see that the zip method is called on an Array and takes in the Arrays it wants to mix-up with as arguments. What happens if the arrays are of different lengths; I don't even know lets find out:</p>
+             <pre><code class="language-ruby">
+clique_one = ['sunny','cher']
+clique_two = ['fatso','stinky','stretch']
+clique_three = ['john','paul','ringo', 'george']
+
+# what does it do if the array calling zip is shorter then its argument arrays?
+new_teams = clique_one.zip(clique_two, clique_three)
+[
+    [0] [
+        [0] "sunny",
+        [1] "fatso",
+        [2] "john"
+    ],
+    [1] [
+        [0] "cher",
+        [1] "stinky",
+        [2] "paul"
+    ]
+]
+# what does it do if the array calling zip is longer then its argument arrays?
+new_teams = clique_three.zip(clique_one, clique_two)
+[
+    [0] [
+        [0] "john",
+        [1] "sunny",
+        [2] "fatso"
+    ],
+    [1] [
+        [0] "paul",
+        [1] "cher",
+        [2] "stinky"
+    ],
+    [2] [
+        [0] "ringo",
+        [1] nil,
+        [2] "stretch"
+    ],
+    [3] [
+        [0] "george",
+        [1] nil,
+        [2] nil
+    ]
+]
+        </code></pre>
+        <p class="blog-text">When the Array calling zip is shorter then then its argument arrays you can see that that it stops when its pushed all the elements of the smaller array into the mixed-up arrays. And when the Array calling is longer it continues even when the smaller Arrays run out of elements to add. </p>
+
+        <h3 class="blog-header">Lets Convert a 2d Array into a structured Hash</h3>
+        <p class="blog-text">So we have an Array whos first index element consists of the header names for each data field and all the following indexes are data entries for the table. Our job is to convert this Array into Hash were every data entry(row) has correct keys for each value. Lets see this in action:</p>
+
+        <pre><code class="language-ruby">
+data_table = [
+  ['Guitar Name','Year Released','Famous Player'],
+  ['Telecaster','1950','Andy Summers'],
+  ['Stratocaster', '1954', 'Buddy Holly'],
+  ['Les Paul', '1952', 'Jimmmy Paige'],
+  ['Jazzmaster','1958','Elvis Costello']
+]
+
+def format_hash(data)
+  formated_hash = []
+  i = 1
+  while i < data.length
+    formated_array = data[0].zip(data[i])
+    p formated_array
+    formated_hash << Hash[formated_array]
+    i += 1
+  end
+  formated_hash
+end
+
+[
+    [0] {
+          "Guitar Name" => "Telecaster",
+        "Year Released" => "1950",
+        "Famous Player" => "Andy Summers"
+    },
+    [1] {
+          "Guitar Name" => "Stratocaster",
+        "Year Released" => "1954",
+        "Famous Player" => "Buddy Holly"
+    },
+    [2] {
+          "Guitar Name" => "Les Paul",
+        "Year Released" => "1952",
+        "Famous Player" => "Jimmmy Paige"
+    },
+    [3] {
+          "Guitar Name" => "Jazzmaster",
+        "Year Released" => "1958",
+        "Famous Player" => "Elvis Costello"
+    }
+]
+
+        </code></pre>
+        <p class="blog-text">So we can see that the while loop iterates 4 times becuase there are four data entries in the array. You can also see that through each iteration the first element of the array, <em>data[0]</em> calles the zip method with <em>data[i]</em> as its argument, data[i]; This merges them into one array that look like this:</p>
+          <pre><code class="language-ruby">
+[["Guitar Name", "Telecaster"], ["Year Released", "1950"], ["Famous Player", "Andy Summers"]]
+
+# So this is a 2-dimensional array with each first level element containing the key as its first element and the value as its second
+# So how do you convert this into a hash? You ask, I ask as well, cuz this ishh is confusing; Lets see:
+
+data_entry = [["Guitar Name", "Telecaster"], ["Year Released", "1950"], ["Famous Player", "Andy Summers"]]
+Hash[data_entry]
+
+{
+      "Guitar Name" => "Telecaster",
+    "Year Released" => "1950",
+    "Famous Player" => "Andy Summers"
+}
+        </code></pre>
+        <p class="blog-text">The last part of this was a black-box to me when I implemented it and was confusing how just magically turned those Arrays into a perfectly formated Hash. The reason it works if is:</p>
+        <pre><code class="language-ruby">
+Hash[ [ [key, value], ... ] ] → new_hash
+Hash[ [ ["a", 100], ["b", 200] ] ]   #=> {"a"=>100, "b"=>200}
+# Our Example: 
+[["Guitar Name", "Telecaster"], ["Year Released", "1950"], ["Famous Player", "Andy Summers"]] #=> { "Guitar Name" => "Telecaster",
+ "Year Released" => "1950", "Famous Player" => "Andy Summers"}
+        </code></pre>
+        <p class="blog-text">This is from the Ruby hash docs, and you can see that you can create a Hash by giving it a 2-dimensional Array whos inside Array elements have two elements; just like the 2-dimensional Array we past it in our problem. Isn't it nice when things come together so perfectly?</p>
+       <h3 class="blog-header">Wasn't This Cool?</h3>
+        <dl>
+          <dt>Things That We Learned:</dt>
+          <dd>
+            <ul class="blog-list">
+              <li>Array#map is a method that combines collections together</li>
+              <li>Arrays and Hashes can be converted into each other</li>
+              <li>Data-Structures are weirdly flexable</li>
+              <li>The best wasy to learn something is to experiment with it</li>
+            </ul>
+          </dd>
+        </dl>
+        
+      </article>
+
+      <nav class="bottom-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="#">Back To Top</a></li>
+          <li class="nav-item"><a class="nav-link bottom-nav-link" href="../portfolio/portfolio.html">Look At My Portfolio</a></li>
+        </ul>
+      </nav>
+      
+      <footer>
+        <h2 class="section-label">Contact</h2>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link twitter" href="https://twitter.com/MitchKroska" target="_blank"><img src="../imgs/webicon-twitter-m.png" alt=""></a></li>
+          <li class="nav-item"><a class="nav-link facebook" href="https://www.facebook.com/mitch.kroska" target="_blank"><img src="../imgs/webicon-facebook-m.png" alt="Facebook"></a></li>
+          <li class="nav-item"><a class="nav-link linkedin" href="www.linkedin.com" target="_blank"><img src="../imgs/webicon-github-m.png" alt="Link"></a></li>
+        </ul>
+      </footer>
+    </div> 
+    <script src="../js/prism.js"></script>
+  </body>
+</html>
+
